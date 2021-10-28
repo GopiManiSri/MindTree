@@ -1,0 +1,12 @@
+input:invalid{
+    border: 3px solid red;
+}
+
+label,input {
+    margin-bottom: 10px;
+        }
+          
+        button {
+            margin-right: 10px;
+            background-color: green;
+        }

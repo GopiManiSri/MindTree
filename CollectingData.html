@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Scores
+        </title>
+        <link rel="stylesheet" href="StylesForForm.css">
+    </head>
+    <body>
+        <center>
+            <fieldset>
+            <legend>Employee/Trainee Score</legend>
+            <form action="printingpage.html" method="get">
+                <label for="miduser">
+                    MID/User ID:
+                </label>
+                <input type="text" id="mid" name="mid" pattern="[0-9]+"/>
+                <span id="error"></span>
+                <br>
+                <label for="nameuser">
+                    Name
+                </label>
+                    <input type="text" id="name" name="name" pattern="[a-z,A-Z]+"/>
+                    <br>
+                <lable>
+                <button type="submit" onclick="errorMessage()"> Submit </button>
+                </lable>
+            </form>
+        </fieldset>
+        </center>
+        
+    </body>
+    <script>
+        function errorMessage() {
+            var error = document.getElementById("error")
+            if (isNaN(document.getElementById("mid").value)) 
+            {
+                  
+                error.textContent = "Please enter a valid number"
+                error.style.color = "red"
+            } else {
+                error.textContent = ""
+            }
+        }
+    </script>
+</html>
